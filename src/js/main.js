@@ -30,7 +30,7 @@ function displayCV(workexperience) {
     //tömmer lista
     experienceList.innerHTML = "";
 
-    if(workexperience.length === 0) {
+    if (workexperience.length === 0) {
         const errMessage = document.createElement("p");
         errMessage.textContent = "Det finns inga erfarenheter att visa.";
         experienceList.appendChild(errMessage);
@@ -53,19 +53,34 @@ function displayCV(workexperience) {
         const description = document.createElement("p");
         description.textContent = `Arbetsbeskrivning: ${experience.description}`;
 
+        //skapar div-container för knapparna
+        const buttonContainer = document.createElement("div");
+        buttonContainer.classList.add("button-container");
+
+        const changeButton = document.createElement("button");
+        changeButton.textContent = "Redigera";
+        changeButton.classList.add("change-button");
+        changeButton.addEventListener("click", () => {
+            window.location.href = `edit.html?id=${experience.id}`;
+        });
+
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Ta bort";
         deleteButton.classList.add("delete-button");
         deleteButton.addEventListener("click", () => {
-                deleteExperience(experience.id);
+            deleteExperience(experience.id);
         });
+
+        //lägger till knapparna i div-container
+        buttonContainer.appendChild(changeButton);
+        buttonContainer.appendChild(deleteButton);
 
         //lägger till allt i div-elementet
         experienceItem.appendChild(title);
         experienceItem.appendChild(location);
         experienceItem.appendChild(period);
         experienceItem.appendChild(description);
-        experienceItem.appendChild(deleteButton);
+        experienceItem.appendChild(buttonContainer);
 
         //lägger till div-elementet i listan
         experienceList.appendChild(experienceItem);
