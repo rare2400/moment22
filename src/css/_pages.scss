@@ -7,14 +7,24 @@
 
 .experience-item {
     @include abstracts.textBox(90%, 1rem 1.5rem, 1rem auto, 0px 0px 8px 0px abstracts.$shadow, 1px solid abstracts.$shadow);
+    background-color: abstracts.$white;
 
     p {
         margin-bottom: 0.3rem;
     }
 }
 
+.button-container {
+    @include abstracts.grid(100%, 2);
+    margin: 1.5rem auto 0.5rem;
+}
+
 .delete-button {
-    @include abstracts.button(abstracts.$header-color, abstracts.$light-text, 20%, 2rem, 0 auto, 100%, center, 1rem, false);
+    @include abstracts.button(abstracts.$header-color, abstracts.$light-text, 70%, 2rem, 0 auto, 100%, center, 1rem, false);
+}
+
+.change-button {
+    @include abstracts.button(abstracts.$header-color, abstracts.$light-text, 70%, 2rem, 0 auto, 100%, center, 1rem, false);
 }
 
 
