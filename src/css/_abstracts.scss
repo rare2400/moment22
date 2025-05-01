@@ -41,28 +41,20 @@ $font-stack: 'Arial', sans-serif;
 }
 
 //mixin för knappar
-@mixin button($bg-color, $text-color, $padding, $margin, $max-w, $textalign, $fontsize, $border: false) {
-    @if $border ==true {
-        background-color: $bg-color;
-        color: $text-color;
-        border: 2px solid $text-color;
-        
-        &:hover {
-            background-color: transparent;
-        }
-    }
-
-    @else {
+@mixin button($bg-color, $text-color, $witdth, $height, $margin, $max-w, $textalign, $fontsize, $border: false) {
+    @if $border == false {
         background-color: $bg-color;
         color: $text-color;
         border: none;
 
         &:hover {
-            background-color: lighten($bg-color, 20%);
+            background-color: rgba(149, 182, 217, 0.576);
+            color: $black;
         }
     }
 
-    padding: $padding;
+    width: $witdth;
+    height: $height;
     margin: $margin;
     max-width: $max-w;
     text-align: $textalign;

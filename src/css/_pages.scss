@@ -14,7 +14,7 @@
 }
 
 .delete-button {
-    @include abstracts.button(abstracts.$header-color, abstracts.$light-text, 0.5rem 1rem, 0 auto, 100%, center, 1rem, false);
+    @include abstracts.button(abstracts.$header-color, abstracts.$light-text, 20%, 2rem, 0 auto, 100%, center, 1rem, false);
 }
 
 
@@ -31,8 +31,9 @@ form {
     select,
     .submit-btn {
         height: 2rem;
-        margin: 0.5rem auto 1.5rem;
-        border: 1px solid rgb(200, 200, 200);
+        padding: 1rem;
+        margin: 0.5rem auto 1rem;
+        border: 1px solid abstracts.$shadow;
     }
 
     select:hover {
@@ -40,8 +41,13 @@ form {
     }
 
     input[type="text"],
-    input[type="url"] {
+    input[type="url"],
+    textarea {
         width: 100%;
+    }
+
+    textarea {
+        height: 8rem;
     }
 
     select {
@@ -52,18 +58,12 @@ form {
         text-align: left;
     }
 
-    .submit-btn {
-        width: 70%;
-        height: 3rem;
-        background-color: abstracts.$header-color;
-    }
 
-    .submit-btn:hover {
-        cursor: pointer;
-        background-color: rgba(149, 182, 217, 0.576);
-    }
-
-    .btn {
+    .btn-row {
         text-align: center;
+    }
+
+    .submit-btn {
+        @include abstracts.button(abstracts.$header-color, abstracts.$light-text, 70%, 3rem, 0 auto, 100%, center, 1rem, false);
     }
 }
