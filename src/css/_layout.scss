@@ -44,4 +44,9 @@ h1 a:hover {
         max-width: 50rem;
         margin: 0 auto;
     }
+
+    #form-container {
+        @include abstracts.textBox(90%, 1rem 1.5rem, 1rem auto, 0px 0px 8px 0px abstracts.$shadow, 1px solid abstracts.$shadow);
+        background-color: abstracts.$white;
+    }
 }
