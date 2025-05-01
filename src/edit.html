@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.scss">
+    <script src="js/edit.js" defer></script>
+    <title>Redigera erfarenhet</title>
+</head>
+
+<body>
+    <header>
+        <div class="h-container">
+            <h1><a href="index.html">Moment 2</a></h1> 
+            <nav>
+                <ul>
+                    <li><a href="add.html">Lägg till erfarenhet</a></li>
+                    <li><a href="about.html">Om</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container" id="form-container">
+        <main>
+            <h2>Redigera erfarenhet</h2>
+            <form method="post" id="add-experience">
+                <label for="companyName">Företagsnamn:</label>
+                <br>
+                <input type="text" name="companyName" id="companyName" value="">
+                <br>
+                <label for="jobTitle">Jobbtitel:</label>
+                <br>
+                <input type="text" name="jobTitle" id="jobTitle" value="">
+                <br>
+                <label for="location">Ort:</label>
+                <br>
+                <input type="text" name="location" id="location" value="">
+                <br>
+                <label for="startDate">Startdatum:</label>
+                <br>
+                <input type="date" name="startDate" id="startDate" value="">
+                <br>
+                <label for="endDate">Slutdatum:</label>
+                <br>
+                <input type="date" name="endDate" id="endDate" value="">
+                <br>
+                <label for="description">Beskrivning:</label>
+                <br>
+                <textarea name="description" id="description" value=""></textarea>
+                <br>
+                <div class="btn-row">
+                    <button type="submit" class="submit-btn">Lägg till</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <footer>
+        <p>
+            Laborationsuppgift för kursen DT207G, <br> Backend-baserad webbutveckling <br>
+            Copyright &copy; 2025 Ramona Reinholdz
+        </p>
+    </footer>
+
+</body>
+
+</html>
