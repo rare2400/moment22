@@ -3,6 +3,11 @@
 //index page
 .container {
     @include abstracts.grid(90%, 1);
+
+    a {
+        color: abstracts.$black;
+        margin-left: 2em;
+    }
 }
 
 .experience-item {
