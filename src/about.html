@@ -23,10 +23,33 @@
     </header>
     <div class="container">
         <main class="about">
-            <h2>Moment 2</h1>
-                <p>Arbetet med uppgiften har varit lärorikt och intressant, eftersom man fått skapa sin egen
-                    REST-webbtjänst och sen använt det till en frontend-applikation. Webbtjänsten hanterar
-                    CRUD-operationer (Create Read Update Delete) och är skapad med MySQL/MariaDB</p>
+            <h2>Moment 2</h2>
+            <p>Arbetet med uppgiften har varit lärorikt och intressant, eftersom man fått skapa sin egen
+                REST-webbtjänst och sen använt det till en frontend-applikation. Webbtjänsten hanterar
+                CRUD-operationer (Create Read Update Delete) vars funktioner placerats i server.js och är skapad med
+                MySQL. Funktionen för att själv skapa databasen och tabellen som kan fyllas med arbetserfarenheter finns
+                i JavaScript-filen install.js, förutsatt att en .env-fil skapats. Ett id skapas automatiskt för varje
+                tupel med AUTO_INCREMENT i tabellen, vilket ger möjlighet till att ändra och ta bort data </p>
+            <br>
+            <p>I frontend-applikation skapas ett CV som placeras på startsidan. Arbetserfarenheter adderas på sidan
+                "lägg till" (add.html) där alla fält ska fyllas i för att datan ska kunna skickas in i och hanteras av
+                databasen. När en eller flera arbetserfarenheter lagts till så står de utskrivna i en lista på
+                startsidan med funktion för att rediger och ta bort dem. Klickar man på redigera kommer man till
+                edit.html där data fylls i med hjälp av API:et, där kan valfri information ändras och trycker man på
+                "spara" uppdateras datan på sidan och i databasen. Det går även att radera data genom att trycka på "ta
+                bort" som på samma sätt raderar datan ur tabellen och därmed från startsidan. Eftersom backend-delen är
+                skapad via mysql så har det varit en utmaning med hur uppgiften ska placeras, det hade varit kul att se
+                hur det fungerade när allt är publicerat. Så för denna gång har jag behövt göra en videodemonstration av
+                lösningen.</p>
+            <br>
+            <p>
+                Uppgiften har varit utmanande eftersom jag valt att använda en annan databas än jag gjorde i tidigare
+                laboration, även om MySQL är en databas som jag har erfarenhet av sedan tidigare. Det är alltid
+                spännande att lära sig nytt och det är roligt att få lära sig hur man kan koppla ihop egna databaser
+                till webbapplikationer. Något som jag tidigare sett fram emot att lära mig var till exempel att kunna
+                ändra data så som man gör i denna uppgiften med arbertserfarenheter. Det är en funktion som man i
+                tidigare arbeten har funderat på att man vill kunna göra.
+            </p>
         </main>
     </div>
     <footer>
